@@ -44,8 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm\FractionalKnapsack.cs" />
+    <Compile Include="Algorithm\MergeSortAlgo.cs" />
+    <Compile Include="Basic Practice\DemoStack.cs" />
+    <Compile Include="CodeForces\HelpfulMath.cs" />
+    <Compile Include="DataStructure\ArrayDatastructure.cs" />
+    <Compile Include="InterviewCodeQuestions\FindStringLength.cs" />
+    <Compile Include="InterviewCodeQuestions\PairwithgivenSum.cs" />
     <Compile Include="InterviewCodeQuestions\StartandEndwithSpecificChar.cs" />
     <Compile Include="InterviewCodeQuestions\StringReverse.cs" />
+    <Compile Include="Leetcode\TotalStep.cs" />
     <Compile Include="Practice\callingclass.cs" />
     <Compile Include="Practice\Practice.cs" />
     <Compile Include="Program.cs" />
