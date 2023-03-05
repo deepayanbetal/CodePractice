@@ -8,46 +8,51 @@ namespace CodePractice.Practice
 {
     public class clsPractice
     {
-        public void merge(int[] arr, int left, int right, int mid)
+        public void mergeArray(int[] arr, int left, int mid, int right)
         {
-            int leftArrayLen = mid - left + 1;
+            int leftArrayLen = mid - left+1;
             int rightArrayLen = right - mid;
-
             var leftTempArray = new int[leftArrayLen];
             var rightTempArray = new int[rightArrayLen];
             int i, j;
 
-            for ( i = 0; i < leftArrayLen; i++)
+            // seperating the array into temp array
+
+            for(i=0;i<leftArrayLen;i++)
+            {
                 leftTempArray[i] = arr[left + i];
-            for ( j = 0; j < rightArrayLen; j++)
-                rightTempArray[j] = arr[mid + 1 + j];
-             i = 0;
-             j = 0;
-            int k = left;
+            }
+            for (j = 0; j < rightArrayLen; j++)
+                rightTempArray[j] = arr[mid+1+j];
+
+            //check & merge two temp arrays
+            i = 0;j = 0;int k = left;// index of marged array
             while(i<leftArrayLen && j<rightArrayLen)
             {
-                if(leftTempArray[i]<= rightTempArray[j])
-                    arr[k++]=leftTempArray[i++];
+                if (leftTempArray[i] <= rightTempArray[j])
+                    arr[k++] = leftTempArray[i++];
                 else
                     arr[k++]=rightTempArray[j++];
             }
 
-            while (i < leftArrayLen)
+            // putting rest elements
+            while(i<leftArrayLen )
                 arr[k++] = leftTempArray[i++];
             while (j < rightArrayLen)
                 arr[k++] = rightTempArray[j++];
         }
 
-        public int[] SortArray(int[] arr, int left, int right)
+        public int[] SortArray(int[] array, int left, int right)
         {
-            if(left<right)
+            if (left < right)
             {
-                int mid = left + (right - left) / 2;
-                SortArray(arr, left, mid);
-                SortArray(arr, mid+1, right);
-                merge(arr,left,right,mid);
+                int middle = left + (right - left) / 2;
+
+                SortArray(array, left, middle);
+                SortArray(array, middle + 1, right);
+                mergeArray(array, left, middle, right);
             }
-            return arr;
+            return array;
         }
 
         public static int[] GenerateRandomNumber(int size)
@@ -87,10 +92,10 @@ namespace CodePractice.Practice
             var array = GenerateRandomNumber(20000);
 
             SortArray(array,0,array.Length-1);
-            //foreach (var item in array)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            foreach (var item in array)
+            {
+                Console.WriteLine(item);
+            }
 
         }
     }

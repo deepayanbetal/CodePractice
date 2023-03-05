@@ -18,10 +18,10 @@ namespace CodePractice.InterviewCodeQuestions
             }
         }
 
-        public void callPairwithgivenSum()
+        public void callPairwithgivenSum(int [] arr,int x)
         {
-            int[] arr = { 8,7,2,5,3,5};
-            findPair(arr,10);
+            //int[] arr = { 8,7,2,5,3,5};
+            findPair(arr,x);
 
 
         // http://www.techiedelight.com/find-pair-with-given-sum-array/

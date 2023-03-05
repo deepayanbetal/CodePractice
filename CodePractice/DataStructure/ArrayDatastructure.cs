@@ -114,6 +114,11 @@ namespace CodePractice.DataStructure
 
             printArray(arr);
         }
+
+        public void hashsetdemo()
+        {
+
+        }
     }
 }
 
