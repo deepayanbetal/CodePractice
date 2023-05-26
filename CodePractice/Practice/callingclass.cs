@@ -2,9 +2,12 @@
 using CodePractice.Basic_Practice;
 using CodePractice.CodeForces;
 using CodePractice.DataStructure;
+using CodePractice.HackerrankProbs;
 using CodePractice.InterviewCodeQuestions;
 using CodePractice.Leetcode;
+using CodePractice.LINQ;
 using CodePractice.Music;
+using CodePractice.Random_Code;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -116,7 +119,7 @@ namespace CodePractice.Practice
 
             LinkedList LD = new LinkedList();
             //LD.insertLinkedList();
-            LD.AllOp();
+            //LD.AllOp();
 
 
             //RecursionDemo rd = new RecursionDemo();
@@ -128,6 +131,23 @@ namespace CodePractice.Practice
 
             //MusicClass1 mc = new MusicClass1();
             //mc.playMusic();
-    }
+
+            /****************************************************************/
+            //LinqTest LT = new LinqTest();
+            //LT.LinqPractice();
+
+            //RandomCode RC = new RandomCode();
+            //RC.convertallmethod();
+            Hackerrank h = new Hackerrank();
+            List<List<int>> arra = new List<List<int>>();
+
+            for (int i = 0; i < 3; i++)
+            {
+                arra.Add(Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
+            }
+
+            int result = h.diagonalDifference(arra);
+
+        }
 }
 }
