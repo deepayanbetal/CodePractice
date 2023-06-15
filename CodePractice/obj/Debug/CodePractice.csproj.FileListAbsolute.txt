@@ -6,3 +6,11 @@ D:\DotNet\CodePractice\CodePractice\obj\Debug\CodePractice.csproj.SuggestedBindi
 D:\DotNet\CodePractice\CodePractice\obj\Debug\CodePractice.csproj.CoreCompileInputs.cache
 D:\DotNet\CodePractice\CodePractice\obj\Debug\CodePractice.exe
 D:\DotNet\CodePractice\CodePractice\obj\Debug\CodePractice.pdb
+E:\DotNet\CodePractice\CodePractice\bin\Debug\CodePractice.exe.config
+E:\DotNet\CodePractice\CodePractice\bin\Debug\CodePractice.exe
+E:\DotNet\CodePractice\CodePractice\bin\Debug\CodePractice.pdb
+E:\DotNet\CodePractice\CodePractice\obj\Debug\CodePractice.csproj.AssemblyReference.cache
+E:\DotNet\CodePractice\CodePractice\obj\Debug\CodePractice.csproj.SuggestedBindingRedirects.cache
+E:\DotNet\CodePractice\CodePractice\obj\Debug\CodePractice.csproj.CoreCompileInputs.cache
+E:\DotNet\CodePractice\CodePractice\obj\Debug\CodePractice.exe
+E:\DotNet\CodePractice\CodePractice\obj\Debug\CodePractice.pdb

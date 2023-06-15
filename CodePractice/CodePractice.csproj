@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm\CoinChange.cs" />
     <Compile Include="Algorithm\FractionalKnapsack.cs" />
     <Compile Include="Algorithm\MergeSortAlgo.cs" />
     <Compile Include="Basic Practice\DemoStack.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Random Code\RandomCode.cs" />
+    <Compile Include="Recursion\RecursionPractice.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

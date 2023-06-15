@@ -8,7 +8,9 @@ using CodePractice.Leetcode;
 using CodePractice.LINQ;
 using CodePractice.Music;
 using CodePractice.Random_Code;
+using CodePractice.Recursion;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -138,16 +140,24 @@ namespace CodePractice.Practice
 
             //RandomCode RC = new RandomCode();
             //RC.convertallmethod();
-            Hackerrank h = new Hackerrank();
-            List<List<int>> arra = new List<List<int>>();
+           // Hackerrank h = new Hackerrank();
+            //List<List<int>> arra = new List<List<int>>();
 
-            for (int i = 0; i < 3; i++)
-            {
-                arra.Add(Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
-            }
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    arra.Add(Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
+            //}
 
-            int result = h.diagonalDifference(arra);
+            //int result = h.diagonalDifference(arra);
 
+
+            /**********************************************************************/
+
+            RecursionPractice recursionPractice = new RecursionPractice();
+            //recursionPractice.printNameNtimes(10000);
+            //recursionPractice.printnameNtimesfromstart(0,11000);
+            //recursionPractice.printnumberNtoone(100);
+            recursionPractice.partition("aabba");
         }
 }
 }
