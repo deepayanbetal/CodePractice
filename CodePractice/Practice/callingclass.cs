@@ -148,6 +148,14 @@ namespace CodePractice.Practice
 
             int result = h.diagonalDifference(arra);
 
+            /**********************************************************************/
+
+            RecursionPractice recursionPractice = new RecursionPractice();
+            //recursionPractice.printNameNtimes(10000);
+            //recursionPractice.printnameNtimesfromstart(0,11000);
+            //recursionPractice.printnumberNtoone(100);
+            recursionPractice.partition("aabba");
+
         }
 }
 }
