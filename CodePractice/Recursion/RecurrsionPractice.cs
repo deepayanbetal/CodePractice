@@ -110,18 +110,48 @@ namespace CodePractice.Recursion
 
         //check a number is palindrom or not
 
-        public bool numberpalindromchk(int start, int end, int s)
-        {
-            while (start <= end)
-            {
-                if (s.ToString()[start++] != s.ToString()[end--])
-                {
-                    return false;
-                }
-            }
+        //public bool numberpalindromchk(int start, int end, int s)
+        //{
+        //    while (start <= end)
+        //    {
+        //        if (s.ToString()[start++] != s.ToString()[end--])
+        //        {
+        //            return false;
+        //        }
+        //    }
 
-            return true;
+        //    return true;
+        //}
+
+        /*****************************************************************************/
+
+        //Generating all possible subsequence 
+       // https://www.youtube.com/watch?v=AxNNVECce8c&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=6
+        public void subSequence(int index, List<int> lst, int[] arr, int len)
+        {
+            if(index==len)              //base condition
+            {
+                foreach(var x in lst)
+                {
+                    Console.Write(x);   //printing  the list elements.
+                }
+                Console.WriteLine("{}");
+                return;
+            }
+            subSequence(index+1,lst,arr,len);   // for not taking elements
+            lst.Add(arr[index]);                // taking elements adding in empty list
+            subSequence(index+1,lst,arr,len);   // for taking elements
+            lst.Remove(arr[index]);             // removing extra added elements while back calling.
         }
 
+        public void subsequenceMain()
+        {
+            int[] arr = { 3, 1, 2 };
+            int len = arr.Length;
+            List<int> lst = new List<int>();
+            subSequence(0, lst, arr, len);
+        }
+
+        /*****************************************************************************/
     }
 }
