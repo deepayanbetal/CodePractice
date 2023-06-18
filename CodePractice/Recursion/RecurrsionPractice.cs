@@ -125,7 +125,7 @@ namespace CodePractice.Recursion
 
         /*****************************************************************************/
 
-        //Generating all possible subsequence 
+        //Generating all possible subsequence of numbers
        // https://www.youtube.com/watch?v=AxNNVECce8c&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=6
         public void subSequence(int index, List<int> lst, int[] arr, int len)
         {
@@ -153,5 +153,66 @@ namespace CodePractice.Recursion
         }
 
         /*****************************************************************************/
+
+        // Is Subsequence of string
+        //https://leetcode.com/problems/is-subsequence/description/
+        public bool IsSubsequence(string s, string t)
+        {
+            
+                if (s == "")
+                {
+                    Console.WriteLine("true");
+                    return true;
+                }
+
+                int index = 0;
+                for (int i = 0; i < t.Length && index < s.Length; i++)
+                {
+                    if (t[i] == s[index])
+                    {
+                        index++;
+                    }
+                }
+                Console.WriteLine(index == s.Length);
+                return index == s.Length;
+        }
+
+        /*****************************************************************************/
+
+        // Sub sequence with sum k
+        //https://www.youtube.com/watch?v=eQCS_v3bw0Q&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=7
+        public void subsequencewithsum(int index, int s, int sum, int[] ele,List<int> lst,int n)
+        {
+            if(index==n)
+            {
+                if(s==sum)
+                {
+                    foreach(var x in lst)
+                    {
+                        Console.Write(x);
+                    }
+                    Console.WriteLine("");
+                }
+                return;
+            }
+            lst.Add(ele[index]);
+            s += ele[index];
+            subsequencewithsum(index+1,s,sum,ele,lst,n);
+            s -= ele[index];
+            lst.Remove(ele[index]);
+            subsequencewithsum(index+1,s,sum,ele,lst,n);
+        }
+
+        public void subsequencewithsumMain()
+        {
+            int index = 0;
+            int s = 0;
+            int sum = 2;
+            int[] ele = { 1, 2, 1 };
+            List<int> lst = new List<int>();
+            int n = ele.Length;
+            subsequencewithsum(index,s,sum,ele,lst,n);
+        }
+
     }
 }

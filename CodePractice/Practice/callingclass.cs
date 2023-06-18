@@ -157,7 +157,9 @@ namespace CodePractice.Practice
             //recursionPractice.printnumberNtoone(100);
            // recursionPractice.partition("aabba");
 
-            recursionPractice.subsequenceMain();
+            //recursionPractice.subsequenceMain();
+            //recursionPractice.IsSubsequence("abc", "hbgdca");
+            recursionPractice.subsequencewithsumMain();
 
         }
 }
