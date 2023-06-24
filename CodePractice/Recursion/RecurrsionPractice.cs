@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -213,6 +214,45 @@ namespace CodePractice.Recursion
             int n = ele.Length;
             subsequencewithsum(index,s,sum,ele,lst,n);
         }
+        /*****************************************************************************/
+        //Combination Sum
+        //https://leetcode.com/problems/combination-sum/description/
+        public IList<IList<int>> CombinationSum(int[] candidates, int target)
+        {
+            Array.Sort(candidates);
+            IList<IList<int>> result = new List<IList<int>>();
+            IList<int> nums = new List<int>();
+            combinationSumMethod(candidates, target, 0, 0, nums, result);
+            foreach (var obj in result.SelectMany(l => l.Select(o => o))) // this is the code for print list of list
+            {
+                Console.Write(obj);
+            }
 
+            return result;
+        }
+
+        private void combinationSumMethod(int[] candidate, int target, int index, int sum, IList<int> nums, IList<IList<int>> result)
+        {
+            if (index < candidate.Length)
+            {
+                int temp = candidate[index] + sum;
+                if (temp > target)
+                {
+                }
+                else if (temp == target)
+                {
+                    nums.Add(candidate[index]);
+                    result.Add(nums.ToList());
+                    nums.RemoveAt(nums.Count - 1);
+                }
+                else
+                {
+                    nums.Add(candidate[index]);
+                    combinationSumMethod(candidate, target, index, temp, nums, result);
+                    nums.RemoveAt(nums.Count - 1);
+                    combinationSumMethod(candidate, target, index + 1, sum, nums, result);
+                }
+            }
+        }
     }
 }

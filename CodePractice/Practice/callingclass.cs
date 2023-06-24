@@ -155,11 +155,13 @@ namespace CodePractice.Practice
             //recursionPractice.printNameNtimes(10000);
             //recursionPractice.printnameNtimesfromstart(0,11000);
             //recursionPractice.printnumberNtoone(100);
-           // recursionPractice.partition("aabba");
+            // recursionPractice.partition("aabba");
 
             //recursionPractice.subsequenceMain();
             //recursionPractice.IsSubsequence("abc", "hbgdca");
-            recursionPractice.subsequencewithsumMain();
+            //recursionPractice.subsequencewithsumMain();
+            int[] arrcomb = { 2, 3, 5 };
+            recursionPractice.CombinationSum(arrcomb,8);
 
         }
 }
